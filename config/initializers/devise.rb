@@ -8,6 +8,9 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '960bfccf1fa5309d95ab1b06b0d8e2b52678274ed8dde7f28d83b43beb87a39c75bca5b08b945a98181f5f70d6b27f5e9f66290e7b56719cb431b4ae988536f8'
 
+  # Social login on facebook
+  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_PASS']
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
