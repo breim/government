@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get '/backoffice' => 'admin/admin#index', as: :admin 
   namespace :admin do
+  	resources :questions
   end
 
 end
