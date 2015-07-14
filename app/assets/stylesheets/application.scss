@@ -41,3 +41,29 @@ label.required:after {
   content:" *";
   color: #d9534f;
 }
+
+
+.user-container-brand{
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  display:block;
+}
+.new-core-btn{
+  float:right;
+  margin-top: -5px;
+}
+
+.user-container-brand .brand-path{
+  background-color: #3686BE;
+  border: 1px solid #3686BE;
+  margin-left: -20px;
+  margin-right: 10px;
+  padding: 20px;
+  margin-top:20px;
+  color: #fff;
+  position:relative;
+  display: inline;
+}
