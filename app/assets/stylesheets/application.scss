@@ -1,5 +1,42 @@
+/* From Gems */
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'rails_bootstrap_forms';
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
+/* Local app assets */
+@import 'pages';
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body{
+
+}
+
+body > .container{
+  margin-top: 85px;
+}
+
+.panel {
+  margin-bottom: 25px;
+  background-color: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); 
+}
+
+.panel-footer {
+  padding: 5px 15px 5px 15px;
+  background-color: whitesmoke;
+  border-top: 1px solid #dddddd;
+}
+
+label.required:after {
+  content:" *";
+  color: #d9534f;
+}
