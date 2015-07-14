@@ -1,33 +1,11 @@
-== README
+Contributing
+======================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+These instructions are probably not perfect, please let us know if anything
+feels wrong or incomplete. Better yet, submit a PR and improve them yourself.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-===The MIT License (MIT)
+The MIT License (MIT)
+==================================
 
 Copyright (c) 2015 Breim
 
