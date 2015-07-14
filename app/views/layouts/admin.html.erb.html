@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Government</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render 'navbars/user' %>
+  <div class="container">
+   <%= render 'layouts/messages' %>
+   <div class="row">
+    <%= render 'admin/menus/admin' %>
+    <div class="col-sm-10">
+      <div class="user-container-brand">
+        <% unless controller_name.classify == 'Admin' %>
+        <div class="brand-path"><%# container_brand(controller_name.classify.constantize.model_name.to_s.downcase )%></div>
+        <% else %>
+        <div class="brand-path"><%= icon('legal fa-lg') %></div>
+        <% end %>
+        <% unless controller_name.classify == 'Admin' %>
+        <strong><%# controller_name.classify.constantize.model_name.human.pluralize %></strong>  
+        <% else %>
+        <strong>Admin</strong>  
+        <% end %>
+        <div class="pull-right new-core-btn">
+          <% if params[:action] == 'index' %>
+          <%= link_to "#{icon('plus-circle')} Nova".html_safe, "#{controller_name.classify.constantize.to_s.downcase.pluralize}/new", class: 'btn btn-warning' unless controller_name.classify == 'Admin' %>
+          <% else %>
+          <%= link_to "#{icon('reply')} Voltar".html_safe, :back, class: 'btn btn-default' %> 
+          <% end %>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= yield %>
+        </div>
+        <div class='panel-footer'></div>
+      </div>
+       <%=  debug(params) if Rails.env.development? %>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
