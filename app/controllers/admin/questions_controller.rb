@@ -22,18 +22,19 @@ class Admin::QuestionsController < Admin::AdminController
 
   def create
     @question = Question.new(question_params)
+    @question.user_id = current_user.id
     @question.save
-    respond_with(@question, lication: admin_questions_path)
+    respond_with(@question, location: admin_questions_path)
   end
 
   def update
     @question.update(question_params)
-    respond_with(@question, lication: admin_questions_path)
+    respond_with(@question, location: admin_questions_path)
   end
 
   def destroy
     @question.destroy
-    respond_with(@question, lication: admin_questions_path)
+    respond_with(@question, location: admin_questions_path)
   end
 
   private
