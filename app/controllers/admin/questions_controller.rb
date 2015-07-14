@@ -9,12 +9,12 @@ class Admin::QuestionsController < Admin::AdminController
   end
 
   def show
-    respond_with(@question)
+    respond_with(@question, location: admin_question_path)
   end
 
   def new
     @question = Question.new
-    respond_with(@question)
+    respond_with(@question, location: new_admin_question_path)
   end
 
   def edit
@@ -23,17 +23,17 @@ class Admin::QuestionsController < Admin::AdminController
   def create
     @question = Question.new(question_params)
     @question.save
-    respond_with(@question)
+    respond_with(@question, lication: admin_questions_path)
   end
 
   def update
     @question.update(question_params)
-    respond_with(@question)
+    respond_with(@question, lication: admin_questions_path)
   end
 
   def destroy
     @question.destroy
-    respond_with(@question)
+    respond_with(@question, lication: admin_questions_path)
   end
 
   private

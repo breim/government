@@ -30,6 +30,8 @@ module ApplicationHelper
     case model
     when 'batman'
       icon('batman fa-lg')
+    when 'question'
+    	icon('question-circle fa-lg')
     end
   end
 
