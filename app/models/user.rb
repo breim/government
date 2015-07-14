@@ -1,9 +1,13 @@
 class User < ActiveRecord::Base
+  # Relations
+  has_many :questions
+  has_many :votes
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
-  
+ 
   # Facebook Autentification for user, this function set fields to save on database via social login check gem 'omniauth-facebook'
   def self.from_omniauth(auth)
   	user = User.find_by(email: auth.info.email)
